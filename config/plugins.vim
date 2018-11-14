@@ -1,7 +1,7 @@
 "-------vim-plug------
 call plug#begin('~/.vim/plugged')
 
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 Plug 'ervandew/supertab'
 	let g:SuperTabDefaultCompletionType = "<c-n>"
