@@ -3,16 +3,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
-Plug 'ervandew/supertab'
-	let g:SuperTabDefaultCompletionType = "<c-n>"
-	let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
 Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+    let g:UltiSnipsExpandTrigger=";"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
