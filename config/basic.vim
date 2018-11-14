@@ -26,7 +26,6 @@ set modified
 set autoread
 set showtabline=2  "0,1,2显示标签栏
 set tabpagemax=15  "设置标签栏最大值
-"set signcolumn=yes  "强制显示侧边栏
 set history=600     "多少次历史操作
 set lazyredraw
 set magic
@@ -36,3 +35,4 @@ set incsearch
 set ignorecase
 set smartcase
 set complete=.,w,b,u
+set term=screen-256color
