@@ -34,5 +34,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set cursorline
 set complete=.,w,b,u
 set term=screen-256color
