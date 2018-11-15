@@ -2,14 +2,17 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-    let g:pymode_warnings = 0
+    let g:pymode_python = 'python3'
 
 Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
+    "let g:ycm_server_python_interpreter = 'python3'
+    let g:ycm_python_binary_path = 'python3'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+    "let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger=";"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<c-p>"
