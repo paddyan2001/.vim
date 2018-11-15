@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
+    let g:pymode_warnings = 0
 
 Plug 'tpope/vim-surround'
 
