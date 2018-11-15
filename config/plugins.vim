@@ -8,7 +8,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
     "let g:ycm_server_python_interpreter = 'python3'
-    let g:ycm_python_binary_path = 'python3'
+    let g:ycm_python_binary_path = '/usr/bin/python3'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
