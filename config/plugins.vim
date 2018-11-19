@@ -34,4 +34,6 @@ Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 
+Plug 'mhinz/vim-startify'
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
