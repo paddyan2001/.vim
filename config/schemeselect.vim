@@ -1,4 +1,6 @@
 "-------scheme select-------
+set t_Co=256
+
 colorscheme gruvbox "desert solarized gruvbox
 set background=dark
 nmap \vd :set background=dark<cr>
