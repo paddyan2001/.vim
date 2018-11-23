@@ -9,6 +9,17 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
     "let g:ycm_server_python_interpreter = 'python3'
     let g:ycm_python_binary_path = '/usr/bin/python3'
+    let g:ycm_semantic_triggers =  {
+                \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+                \ 'cs,lua,javascript': ['re!\w{2}'],
+                \ }
+    let g:ycm_filetype_whitelist = { 
+                \ "c":1,
+                \ "python":1, 
+                \ "go":1,
+                \ "sh":1,
+                \ "zsh":1,
+                \ }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
