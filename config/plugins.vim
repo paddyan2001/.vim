@@ -1,4 +1,10 @@
 "-------vim-plug------
+if has('unix')
+    let g:python_path='/usr/bin/python3'
+elseif has('mac')
+    let g:python_path='/usr/bin/python3'
+endif
+
 call plug#begin('~/vimplugged')
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -8,10 +14,10 @@ Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
     "let g:ycm_server_python_interpreter = 'python3'
-    let g:ycm_python_binary_path = '/usr/bin/python3'
+    let g:ycm_python_binary_path = g:python_path
     let g:ycm_semantic_triggers =  {
                 \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-                \ 'cs,lua,javascript': ['re!\w{2}'],
+                \ 'cs,lua,javascript,vim': ['re!\w{2}'],
                 \ }
     let g:ycm_filetype_whitelist = { 
                 \ "c":1,
