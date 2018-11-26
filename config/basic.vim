@@ -37,7 +37,7 @@ set smartcase
 set cursorline
 set complete=.,w,b,u
 set term=screen-256color
-set paste
+"set paste
 
 if has('wildmenu')
         set nowildmenu
