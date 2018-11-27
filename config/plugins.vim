@@ -30,7 +30,7 @@ Plug 'Valloric/YouCompleteMe'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-    "let g:UltiSnipsUsePythonVersion = 3
+    let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger=";"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<c-p>"
