@@ -8,9 +8,6 @@ endif
 
 call plug#begin('~/vimplugged')
 
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-    let g:pymode_python = 'python3'
-
 Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
@@ -39,7 +36,7 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 	"autocmd vimenter * NERDTree
-	map <C-n> :NERDTreeToggle<CR>
+	map <C-t> :NERDTreeToggle<CR>
 
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 
