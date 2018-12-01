@@ -19,9 +19,9 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
-    let g:UltiSnipsExpandTrigger=";"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+    let g:UltiSnipsExpandTrigger="<c-l>"
+    let g:UltiSnipsJumpForwardTrigger="<c-j>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
@@ -41,5 +41,8 @@ Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 
 Plug 'mhinz/vim-startify'
+
+Plug 'easymotion/vim-easymotion'
+    nmap \ <Plug>(easymotion-prefix)
 
 call plug#end()
