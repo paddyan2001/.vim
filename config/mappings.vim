@@ -6,12 +6,10 @@ nmap ; :
 " ------------
 
 " Disable arrow movement, resize splits instead.
-if get(g:, 'elite_mode')
-	nnoremap <Up>    :resize +2<CR>
-	nnoremap <Down>  :resize -2<CR>
-	nnoremap <Left>  :vertical resize +2<CR>
-	nnoremap <Right> :vertical resize -2<CR>
-endif
+	nnoremap <Up>    :resize -2<CR>
+	nnoremap <Down>  :resize +2<CR>
+	nnoremap <Left>  :vertical resize -2<CR>
+	nnoremap <Right> :vertical resize +2<CR>
 
 " Double leader key for toggling visual-line mode
 nmap <silent> <Leader><Leader> V
@@ -72,10 +70,6 @@ noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Window control
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 nnoremap <C-x> <C-w>x<C-w>w
 nnoremap <silent><C-w>z :vert resize<CR>:resize<CR>:normal! ze<CR>
 
@@ -249,7 +243,6 @@ nnoremap <silent> \g  :<C-u>split<CR>
 nnoremap <silent> \v  :<C-u>vsplit<CR>
 nnoremap <silent> \t  :tabnew<CR>
 nnoremap <silent> \o  :<C-u>only<CR>
-nnoremap <silent> \b  :b#<CR>
 nnoremap <silent> \c  :close<CR>
 nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
 
