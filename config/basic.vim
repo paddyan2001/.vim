@@ -13,7 +13,6 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set backspace =indent,eol,start
-set cot-=preview    "设置不显示函数属性buffer
 set nowrap          "设置不自动换行
 set showmatch       "高亮括号匹配
 set matchtime=2     "高亮括号时间是十分之n秒
@@ -35,7 +34,8 @@ set incsearch
 set ignorecase
 set smartcase
 set cursorline
-set complete=.,w,b,u
+set complete=.
+set completeopt=menuone
 set term=screen-256color
 
 if has('wildmenu')
