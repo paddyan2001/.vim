@@ -109,6 +109,9 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 " Fast saving
 nnoremap <silent><Leader>w :write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
+inoremap <silent><c-w> <Esc>:write<CR>
+vnoremap <silent><c-w> <Esc>:write<CR>
+nnoremap <silent><c-w> :write<CR>
 
 " Save a file with sudo
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
