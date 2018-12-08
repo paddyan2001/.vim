@@ -1,3 +1,6 @@
+if has('python3')
+    silent! python3 1
+endif
 "-------vim-plug------
 if has('unix')
     let g:python_path='/usr/bin/python3'
@@ -12,9 +15,10 @@ Plug 'tpope/vim-surround'
 
 Plug 'Valloric/YouCompleteMe'
     let g:ycm_server_python_interpreter = g:python_path
+    let g:ycm_path_to_python_interpreter = g:python_path
     let g:ycm_python_binary_path = g:python_path
     let g:ycm_key_invoke_completion = '<c-h>'
-    let g:ycm_filetype_whitelist = { "c":1, "python":1, "go":1, "sh":1, "zsh":1, }
+    let g:ycm_filetype_whitelist = { "c":1, "python":1, "go":1, "sh":1, "zsh":1,"vim":1 }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
