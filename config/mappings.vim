@@ -3,7 +3,7 @@
 let mapleader=","
 nmap ; :
 
-"tabedit
+"tabs control
 cnoremap te tabedit<space>
 cnoremap tn tabn<CR>
 cnoremap tp tabp<CR>
