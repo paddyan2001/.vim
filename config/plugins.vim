@@ -20,6 +20,9 @@ Plug 'Valloric/YouCompleteMe'
     let g:ycm_key_invoke_completion = '<c-h>'
     let g:ycm_filetype_whitelist = { "c":1, "python":1, "go":1, "sh":1, "zsh":1,"vim":1 }
     nmap <f7> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    imap <f7> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    vmap <f7> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nmap \yg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
