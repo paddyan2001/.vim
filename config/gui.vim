@@ -1,4 +1,6 @@
 "-------gui setting------
+set winaltkeys=no
+set macmeta
 set guioptions-=r
 set guioptions-=L
 set guioptions-=m

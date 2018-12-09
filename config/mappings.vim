@@ -70,8 +70,26 @@ noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Window control
+
+noremap <m-h> <c-w>h
+noremap <m-l> <c-w>l
+noremap <m-j> <c-w>j
+noremap <m-k> <c-w>k
+inoremap <m-h> <esc><c-w>h
+inoremap <m-l> <esc><c-w>l
+inoremap <m-j> <esc><c-w>j
+inoremap <m-k> <esc><c-w>k
+
+if exists(':terminal')
+set termwinkey=<c-w>
+tnoremap <m-h> <c-w>h
+tnoremap <m-l> <c-w>l
+tnoremap <m-j> <c-w>j
+tnoremap <m-k> <c-w>k
+tnoremap <m-q> <c-\><c-n>
 nnoremap <C-x> <C-w>x<C-w>w
 nnoremap <silent><C-w>z :vert resize<CR>:resize<CR>:normal! ze<CR>
+endif
 
 " Select blocks after indenting
 xnoremap < <gv
@@ -109,9 +127,6 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 " Fast saving
 nnoremap <silent><Leader>w :write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
-inoremap <silent><c-w> <Esc>:write<CR>
-vnoremap <silent><c-w> <Esc>:write<CR>
-nnoremap <silent><c-w> :write<CR>
 
 " Save a file with sudo
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
@@ -275,17 +290,4 @@ function! s:SweepBuffers()
 	if ! empty(hidden)
 		execute 'silent bdelete' join(hidden)
 	endif
-endfunction
-
-" OpenChangedFiles COMMAND
-" Open a split for each dirty file in git
-function! OpenChangedFiles()
-	only " Close all windows, unless they're modified
-	let status =
-		\ system('git status -s | grep "^ \?\(M\|A\|UU\)" | sed "s/^.\{3\}//"')
-	let filenames = split(status, "\n")
-	exec 'edit ' . filenames[0]
-	for filename in filenames[1:]
-		exec 'sp ' . filename
-	endfor
 endfunction
