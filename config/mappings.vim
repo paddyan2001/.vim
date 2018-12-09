@@ -2,6 +2,22 @@
 "---------------------------------------------------------
 let mapleader=","
 nmap ; :
+
+"tabedit
+cnoremap te tabedit<space>
+cnoremap tn tabn<CR>
+cnoremap tp tabp<CR>
+noremap \1 :tabn 1<cr>
+noremap \2 :tabn 2<cr>
+noremap \3 :tabn 3<cr>
+noremap \4 :tabn 4<cr>
+noremap \5 :tabn 5<cr>
+noremap \6 :tabn 6<cr>
+noremap \7 :tabn 7<cr>
+noremap \8 :tabn 8<cr>
+noremap \9 :tabn 9<cr>
+noremap \0 :tabn 10<cr>
+
 " Non-standard {{{
 " ------------
 
@@ -70,26 +86,11 @@ noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Window control
-
-noremap <m-h> <c-w>h
-noremap <m-l> <c-w>l
-noremap <m-j> <c-w>j
-noremap <m-k> <c-w>k
-inoremap <m-h> <esc><c-w>h
-inoremap <m-l> <esc><c-w>l
-inoremap <m-j> <esc><c-w>j
-inoremap <m-k> <esc><c-w>k
-
 if exists(':terminal')
-set termwinkey=<c-w>
-tnoremap <m-h> <c-w>h
-tnoremap <m-l> <c-w>l
-tnoremap <m-j> <c-w>j
-tnoremap <m-k> <c-w>k
-tnoremap <m-q> <c-\><c-n>
+    set termwinkey=<c-w>
+endif
 nnoremap <C-x> <C-w>x<C-w>w
 nnoremap <silent><C-w>z :vert resize<CR>:resize<CR>:normal! ze<CR>
-endif
 
 " Select blocks after indenting
 xnoremap < <gv
@@ -105,7 +106,6 @@ nmap <S-Tab> <<_
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
 " Navigation in command line
-cnoremap <C-h> <Home>
 cnoremap <C-l> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
@@ -152,7 +152,7 @@ nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
 nmap <silent> <Leader>ts :setlocal spell!<cr>
 nmap <silent> <Leader>tn :setlocal nonumber!<CR>
 nmap <silent> <Leader>tl :setlocal nolist!<CR>
-nmap <silent> <Leader>th :nohlsearch<CR>
+nmap <silent> <space> :nohlsearch<CR>
 nmap <silent> <Leader>tw :setlocal wrap! breakindent!<CR>
 
 " Tabs
