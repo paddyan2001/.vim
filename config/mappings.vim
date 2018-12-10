@@ -3,21 +3,6 @@
 let mapleader=","
 nmap ; :
 
-"tabs control
-cnoremap te tabedit<space>
-cnoremap tn tabn<CR>
-cnoremap tp tabp<CR>
-noremap \1 :tabn 1<cr>
-noremap \2 :tabn 2<cr>
-noremap \3 :tabn 3<cr>
-noremap \4 :tabn 4<cr>
-noremap \5 :tabn 5<cr>
-noremap \6 :tabn 6<cr>
-noremap \7 :tabn 7<cr>
-noremap \8 :tabn 8<cr>
-noremap \9 :tabn 9<cr>
-noremap \0 :tabn 10<cr>
-
 " Non-standard {{{
 " ------------
 
@@ -263,6 +248,18 @@ nnoremap <silent> \t  :tabnew<CR>
 nnoremap <silent> \o  :<C-u>only<CR>
 nnoremap <silent> \c  :close<CR>
 nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
+
+"tabs control
+noremap \1 :tabn 1<cr>
+noremap \2 :tabn 2<cr>
+noremap \3 :tabn 3<cr>
+noremap \4 :tabn 4<cr>
+noremap \5 :tabn 5<cr>
+noremap \6 :tabn 6<cr>
+noremap \7 :tabn 7<cr>
+noremap \8 :tabn 8<cr>
+noremap \9 :tabn 9<cr>
+noremap \0 :tabn 10<cr>
 
 " Split current buffer, go to previous window and previous buffer
 nnoremap <silent> \sv :split<CR>:wincmd p<CR>:e#<CR>
