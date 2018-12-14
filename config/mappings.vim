@@ -140,37 +140,6 @@ vnoremap mj :m'>+<CR>gv=gv
 noremap  mk :m-2<CR>
 noremap  mj :m+<CR>
 
-if has('mac')
-	" Open the macOS dictionary on current word
-	nmap <Leader>? :!open dict://<cword><CR><CR>
-
-	" Use Marked for real-time Markdown preview
-	if executable('/Applications/Marked 2.app/Contents/MacOS/Marked 2')
-		autocmd MyAutoCmd FileType markdown
-			\ nmap <buffer><Leader>P :silent !open -a Marked\ 2.app '%:p'<CR>
-	endif
-
-	" Use Dash on Mac, for context help
-	if executable('/Applications/Dash.app/Contents/MacOS/Dash')
-		autocmd FileType yaml.ansible,php,css,less,html,markdown
-			\ nmap <silent><buffer> K :!open -g dash://"<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
-		autocmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
-			\ nmap <silent><buffer> K :!open -g dash://"<cword>"&<CR><CR>
-	endif
-
-" Use Zeal on Linux for context help
-elseif executable('zeal')
-	autocmd FileType yaml.ansible,php,css,less,html,markdown
-		\ nmap <silent><buffer> K :!zeal --query "<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
-	autocmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
-		\ nmap <silent><buffer> K :!zeal --query "<cword>"&<CR><CR>
-endif
-
-" }}}  Display diff from last save {{{
-command! DiffOrig vert new | setlocal bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
-" }}}  Append modeline to EOF {{{
-nnoremap <silent> <Leader>ml :call <SID>append_modeline()<CR>
-
 " s: Windows and buffers {{{
 
 nnoremap <silent> \g  :<C-u>split<CR>
@@ -196,7 +165,28 @@ noremap \0 :tabn 10<cr>
 nnoremap <C-Left>  :vertical resize -3<CR>
 nnoremap <C-Right> :vertical resize +3<CR>
 
-" Split current buffer, go to previous window and previous buffer
-nnoremap <silent> \sv :split<CR>:wincmd p<CR>:e#<CR>
-nnoremap <silent> \sg :vsplit<CR>:wincmd p<CR>:e#<CR>
+if has('mac')
+	" Open the macOS dictionary on current word
+	nmap <Leader>? :!open dict://<cword><CR><CR>
 
+	" Use Marked for real-time Markdown preview
+	if executable('/Applications/Marked 2.app/Contents/MacOS/Marked 2')
+		autocmd MyAutoCmd FileType markdown
+			\ nmap <buffer><Leader>P :silent !open -a Marked\ 2.app '%:p'<CR>
+	endif
+
+	" Use Dash on Mac, for context help
+	if executable('/Applications/Dash.app/Contents/MacOS/Dash')
+		autocmd FileType yaml.ansible,php,css,less,html,markdown
+			\ nmap <silent><buffer> K :!open -g dash://"<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
+		autocmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
+			\ nmap <silent><buffer> K :!open -g dash://"<cword>"&<CR><CR>
+	endif
+
+" Use Zeal on Linux for context help
+elseif executable('zeal')
+	autocmd FileType yaml.ansible,php,css,less,html,markdown
+		\ nmap <silent><buffer> K :!zeal --query "<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
+	autocmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
+		\ nmap <silent><buffer> K :!zeal --query "<cword>"&<CR><CR>
+endif
