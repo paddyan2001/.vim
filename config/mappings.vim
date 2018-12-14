@@ -4,13 +4,6 @@ let mapleader=","
 nmap ; :
 
 " Non-standard {{{
-" ------------
-
-" Disable arrow movement, resize splits instead.
-nnoremap \<Up>    :resize -2<CR>
-nnoremap \<Down>  :resize +2<CR>
-nnoremap \<Left>  :vertical resize -2<CR>
-nnoremap \<Right> :vertical resize +2<CR>
 
 " Double leader key for toggling visual-line mode
 nmap <silent> <Leader><Leader> V
@@ -27,9 +20,6 @@ vnoremap <expr> cN "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>" . "``cgN"
 nnoremap cp yap<S-}>p
 nnoremap <leader>a =ip
 
-" xnoremap p  "0p
-" nnoremap x "_x
-
 " Toggle fold
 nnoremap <CR> za
 
@@ -40,10 +30,7 @@ nnoremap <S-Return> zMza
 nmap <BS> %
 xmap <BS> %
 
-"}}}
-" Global niceties {{{
-" ---------------
-
+"}}} Global niceties {{{
 " Start an external command with a single bang
 nnoremap ! :!
 
@@ -52,7 +39,7 @@ cnoreabbrev qw wq
 cnoreabbrev bd bd
 
 " Start new line from any cursor position
-inoremap <S-Return> <C-o>o
+inoremap <C-Return> <esc>o
 
 " Quick substitute within selected area
 xnoremap s :s//g<Left><Left>
@@ -117,8 +104,7 @@ vnoremap <silent><Leader>w <Esc>:write<CR>
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
 cmap W!! w !sudo tee % >/dev/null
 
-" }}}
-" Editor UI {{{
+" }}} Editor UI {{{
 " ---------
 
 " I like to :quit with 'q', shrug.
@@ -128,11 +114,6 @@ nnoremap <silent> q :<C-u>:quit<CR>
 nnoremap Q q
 nnoremap gQ @q
 
-" Show highlight names under cursor
-nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
-	\.'> trans<'.synIDattr(synID(line('.'), col('.'), 0), 'name').'> lo<'
-	\.synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name').'>'<CR>
-
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
 nmap <silent> <Leader>tn :setlocal nonumber!<CR>
@@ -140,34 +121,10 @@ nmap <silent> <Leader>tl :setlocal nolist!<CR>
 nmap <silent> <space> :nohlsearch<CR>
 nmap <silent> <Leader>tw :setlocal wrap! breakindent!<CR>
 
-" Tabs
-nnoremap <silent> gf :<C-u>tabfirst<CR>
-nnoremap <silent> gl :<C-u>tablast<CR>
-nnoremap <silent> gp :<C-u>tabprevious<CR>
-nnoremap <silent> gn :<C-U>tabnext<CR>
-nnoremap <silent> gt :<C-U>tabnew<CR>
-
 " }}} Totally Custom {{{
-" --------------
 
 " Remove spaces at the end of lines
 nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
-
-" C-r: Easier search and replace
-xnoremap <C-r> :<C-u>call <SID>get_selection('/')<CR>:%s/\V<C-R>=@/<CR>//gc<Left><Left><Left>
-
-" Returns visually selected text
-function! s:get_selection(cmdtype) "{{{
-	let temp = @s
-	normal! gv"sy
-	let @/ = substitute(escape(@s, '\'.a:cmdtype), '\n', '\\n', 'g')
-	let @s = temp
-endfunction "}}}
-
-" Background dark/light toggle and contrasts
-nnoremap <silent><Leader>b :<C-u>call <SID>toggle_background()<CR>
-nmap <silent> s- :<c-u>call <SID>toggle_contrast(-v:count1)<cr>
-nmap <silent> s= :<c-u>call <SID>toggle_contrast(+v:count1)<cr>
 
 " Location list movement
 nmap <Leader>j :lnext<CR>
@@ -177,23 +134,11 @@ nmap <Leader>k :lprev<CR>
 nnoremap <Leader>d m`YP``
 vnoremap <Leader>d YPgv
 
-" Source line and selection in vim
-vnoremap <Leader>S y:execute @@<CR>:echo 'Sourced selection.'<CR>
-nnoremap <Leader>S ^vg_y:execute @@<CR>:echo 'Sourced line.'<CR>
-
-" Yank buffer's absolute path to X11 clipboard
-nnoremap <Leader>y :let @+=expand("%")<CR>:echo 'Relative path copied to clipboard.'<CR>
-nnoremap <Leader>Y :let @+=expand("%:p")<CR>:echo 'Absolute path copied to clipboard.'<CR>
-
 " Drag current line/s vertically and auto-indent
 vnoremap mk :m-2<CR>gv=gv
 vnoremap mj :m'>+<CR>gv=gv
 noremap  mk :m-2<CR>
 noremap  mj :m+<CR>
-
-" Session management shortcuts
-nmap <silent> <Leader>se :<C-u>execute 'SessionSave' fnamemodify(resolve(getcwd()), ':p:gs?/?_?')<CR>
-nmap <silent> <Leader>os :<C-u>execute 'source '.g:session_directory.'/'.fnamemodify(resolve(getcwd()), ':p:gs?/?_?').'.vim'<CR>
 
 if has('mac')
 	" Open the macOS dictionary on current word
@@ -221,24 +166,10 @@ elseif executable('zeal')
 		\ nmap <silent><buffer> K :!zeal --query "<cword>"&<CR><CR>
 endif
 
-" }}}
-
-" Display diff from last save {{{
+" }}}  Display diff from last save {{{
 command! DiffOrig vert new | setlocal bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
-" }}}
-
-" Append modeline to EOF {{{
+" }}}  Append modeline to EOF {{{
 nnoremap <silent> <Leader>ml :call <SID>append_modeline()<CR>
-
-" Append modeline after last line in buffer
-" See: http://vim.wikia.com/wiki/Modeline_magic
-function! s:append_modeline() "{{{
-	let l:modeline = printf(' vim: set ts=%d sw=%d tw=%d %set :',
-				\ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-	let l:modeline = substitute(&commentstring, '%s', l:modeline, '')
-	call append(line('$'), l:modeline)
-endfunction "}}}
-" }}}
 
 " s: Windows and buffers {{{
 
@@ -261,30 +192,11 @@ noremap \8 :tabn 8<cr>
 noremap \9 :tabn 9<cr>
 noremap \0 :tabn 10<cr>
 
+" use left right arrow movement, resize splits instead.
+nnoremap <C-Left>  :vertical resize -3<CR>
+nnoremap <C-Right> :vertical resize +3<CR>
+
 " Split current buffer, go to previous window and previous buffer
 nnoremap <silent> \sv :split<CR>:wincmd p<CR>:e#<CR>
 nnoremap <silent> \sg :vsplit<CR>:wincmd p<CR>:e#<CR>
 
-function! WipeHiddenBuffers()
-	let tpbl=[]
-	call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-	for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-		silent execute 'bwipeout' buf
-	endfor
-endfunction
-
-function! s:BufferEmpty()
-	let l:current = bufnr('%')
-	if ! getbufvar(l:current, '&modified')
-		enew
-		silent! execute 'bdelete '.l:current
-	endif
-endfunction
-
-function! s:SweepBuffers()
-	let bufs = range(1, bufnr('$'))
-	let hidden = filter(bufs, 'buflisted(v:val) && !bufloaded(v:val)')
-	if ! empty(hidden)
-		execute 'silent bdelete' join(hidden)
-	endif
-endfunction
