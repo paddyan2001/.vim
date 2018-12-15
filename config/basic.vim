@@ -36,7 +36,6 @@ set smartcase
 set cursorline
 set complete=.
 set completeopt=menuone
-set term=screen-256color
 
 if has('wildmenu')
         set nowildmenu

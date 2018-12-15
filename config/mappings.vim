@@ -58,7 +58,7 @@ noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Window control
-if exists(':terminal')
+if exists(':terminal') && has('vim')
     set termwinkey=<c-w>
 endif
 nnoremap <C-x> <C-w>x<C-w>w
