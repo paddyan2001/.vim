@@ -33,7 +33,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set cursorline
+"set cursorline
 set complete=.
 set completeopt=menuone
 

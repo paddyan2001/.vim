@@ -19,4 +19,3 @@ endif
 
 nmap <leader>vd :set background=dark<cr>
 nmap <leader>vl :set background=light<cr>
-
