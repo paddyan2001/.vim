@@ -18,7 +18,7 @@ Plug 'Valloric/YouCompleteMe'
     let g:ycm_path_to_python_interpreter = g:python_path
     let g:ycm_python_binary_path = g:python_path
     let g:ycm_key_invoke_completion = '<c-h>'
-    let g:ycm_filetype_whitelist = {"c":1,"python":1,"go":1,"sh":1,"zsh":1,"vim":1 }
+    let g:ycm_filetype_whitelist = {"html":1,"python":1,"javascript":1,"go":1,"sh":1,"zsh":1,"vim":1 }
     nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
