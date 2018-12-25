@@ -13,12 +13,12 @@ call plug#begin('~/vimplugged')
 
 Plug 'tpope/vim-surround'
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim']}
     let g:ycm_server_python_interpreter = g:python_path
     let g:ycm_path_to_python_interpreter = g:python_path
     let g:ycm_python_binary_path = g:python_path
     let g:ycm_key_invoke_completion = '<c-h>'
-    let g:ycm_filetype_whitelist = {"html":1,"python":1,"javascript":1,"typescript":1,"go":1,"sh":1,"zsh":1,"vim":1 }
+    let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1 }
     let g:ycm_seed_identifiers_with_syntax=1
     let g:ycm_complete_in_comments = 1
     let g:ycm_complete_in_strings = 1
