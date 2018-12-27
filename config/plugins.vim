@@ -46,7 +46,7 @@ Plug 'Yggdroot/LeaderF'
 		\}
 
 Plug 'Yggdroot/indentLine'
-
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
@@ -54,6 +54,9 @@ Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 	map <C-t> :NERDTreeToggle<CR>
 
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
+
+Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
+Plug 'mattn/emmet-vim',{'for':'html'}
 
 Plug 'mhinz/vim-startify'
 

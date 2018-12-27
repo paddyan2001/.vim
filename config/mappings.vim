@@ -2,6 +2,8 @@
 "---------------------------------------------------------
 let mapleader=","
 nmap ; :
+nmap <space>[ O<esc>j
+nmap <space>] o<esc>k
 
 " Non-standard {{{
 
@@ -116,9 +118,10 @@ nnoremap gQ @q
 
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
-nmap <silent> <Leader>tn :setlocal nonumber!<CR>
-nmap <silent> <Leader>tl :setlocal nolist!<CR>
-nmap <silent> <space> :nohlsearch<CR>
+nmap <silent> <Leader>nn :setlocal nonumber!<CR>
+nmap <silent> <Leader>nl :setlocal nolist!<CR>
+nmap <silent> <Leader>nh :nohlsearch<CR>
+nmap <silent> <Leader>nw :nowrap<CR>
 nmap <silent> <Leader>tw :setlocal wrap! breakindent!<CR>
 
 " }}} Totally Custom {{{
