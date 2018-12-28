@@ -24,8 +24,8 @@ Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript']}
     let g:ycm_complete_in_strings = 1
     let g:ycm_max_diagnostics_to_display=16
     let g:ycm_max_num_candidates = 30
-    let g:ycm_error_symbol = '>X'
-    let g:ycm_warning_symbol = '>!'
+    let g:ycm_error_symbol = '❌'
+    let g:ycm_warning_symbol = '！'
     nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -55,8 +55,8 @@ Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 
-Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
-Plug 'mattn/emmet-vim',{'for':'html'}
+"Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
+"Plug 'mattn/emmet-vim',{'for':'html'}
 
 Plug 'mhinz/vim-startify'
 
