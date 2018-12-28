@@ -53,14 +53,16 @@ Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 	"autocmd vimenter * NERDTree
 	map <C-t> :NERDTreeToggle<CR>
 
-"Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
-
-"Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
-"Plug 'mattn/emmet-vim',{'for':'html'}
-
 Plug 'mhinz/vim-startify'
 
 Plug 'easymotion/vim-easymotion'
     nmap \ <Plug>(easymotion-prefix)
+
+"------For ProgramLanguage------
+
+"Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
+
+Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
+Plug 'mattn/emmet-vim',{'for':'html'}
 
 call plug#end()
