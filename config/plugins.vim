@@ -1,3 +1,7 @@
+if exists("g:plugins_vim")
+    finish
+endif
+let g:plugins_vim = 1
 if has('python3')
     silent! python3 1
 endif

@@ -1,9 +1,17 @@
+if exists("g:mappings_vim")
+    finish
+endif
+let g:mappings_vim = 1
 " Key-mappings
 "---------------------------------------------------------
 let mapleader=","
 nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
+
+nmap \f :call FormatCode()<CR>
+nmap \r :call Run()<CR>
+nmap \s :call Sort()<CR>
 
 " Non-standard {{{
 

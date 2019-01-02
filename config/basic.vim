@@ -1,3 +1,7 @@
+if exists("g:basic_vim")
+    finish
+endif
+let g:basic_vim = 1
 "-------basic setting------
 set termencoding=utf-8
 set encoding=utf-8

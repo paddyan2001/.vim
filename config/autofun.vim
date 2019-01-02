@@ -1,13 +1,7 @@
-"-------autorun------
-augroup makejava
-    autocmd!
-    autocmd FileType java set makeprg=javac\ %
-augroup END
-
-augroup makec
-    autocmd!
-    autocmd FileType c set makeprg=gcc\ %\ -o\ %<
-augroup END
+if exists("g:autofun_vim")
+    finish
+endif
+let g:autofun_vim = 1
 
 func! FormatCode()
     exec "w"
@@ -15,14 +9,22 @@ func! FormatCode()
         exec "!autopep8 --in-place --aggressive %"
     endif
 endfunc
+
+func! Sort()
+    exec "w"
+    if &filetype == "python"
+        exec "!isort %"
+    endif
+endfunc
+
 func! Run()
     if &filetype == "python"
         exec "w"
-        if (g:iswindows)
+        if has('win64')||has('win32')
             exec "below term python %"
-        elseif(g:ismac)
+        elseif has('mac')
             exec "below term python3 %"
-        elseif(g:islinux)
+        elseif has('unix')
             exec "!clear&&python3 %"
         endif
     endif
@@ -37,5 +39,3 @@ func! Run()
         exec "below term java %<"
     endif
 endfunc
-"-------autorun------
-

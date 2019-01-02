@@ -1,3 +1,7 @@
+if exists("g:schemeselect_vim")
+    finish
+endif
+let g:schemeselect_vim = 1
 "-------scheme select-------
 colorscheme gruvbox
 

@@ -1,3 +1,7 @@
+if exists("g:gui_vim")
+    finish
+endif
+let g:gui_vim = 1
 "-------gui setting------
 set winaltkeys=no
 set macmeta
