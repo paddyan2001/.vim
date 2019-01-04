@@ -8,7 +8,3 @@ exec 'source' '~/.vim/config/autofun.vim'
 if has("gui_running")
     exec 'source' '~/.vim/config/gui.vim'
 endif
-
-if has('nvim')
-    exec 'source' '~/.vim/config/neovim.vim'
-endif
