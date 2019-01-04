@@ -20,12 +20,12 @@ endfunc
 func! Run()
     if &filetype == "python"
         exec "w"
-        if has('win64')||has('win32')
-            exec "below term python %"
-        elseif has('mac')
-            exec "below term python3 %"
+        if has('mac')
+            exec "!python3 %"
         elseif has('unix')
             exec "!clear&&python3 %"
+        elseif has('win64')||has('win32')
+            exec "below term python %"
         endif
     endif
     if &filetype=="sh"

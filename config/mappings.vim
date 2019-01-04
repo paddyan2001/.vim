@@ -119,9 +119,11 @@ cmap W!! w !sudo tee % >/dev/null
 
 " I like to :quit with 'q', shrug.
 nnoremap <silent> q :<C-u>:close<CR>
-
-" Macros
 nnoremap <silent> Q :<C-u>:quit!<CR>
+nnoremap <silent> \q :<C-u>:bd<CR>
+nnoremap <silent> \Q :<C-u>:bd!<CR>
+nnoremap <silent> <leader>q :<C-u>:quit<CR>
+
 nnoremap gQ @q
 
 " Toggle editor visuals
