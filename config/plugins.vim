@@ -13,7 +13,7 @@ if has('mac')
     let g:python_path='/usr/local/bin/python3'
 endif
 if has('win64')||has('win32')
-    let g:python_path='C:\\Users\\yanying\\AppData\\Local\\Programs\\Python\\Python37\\python'
+    let g:python_path='%LOCALAPPDATA%\\Programs\\Python\\Python37\\python'
 endif
 
 call plug#begin('~/vimplugged')
