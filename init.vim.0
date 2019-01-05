@@ -1,0 +1,5 @@
+"In Windows copy this file to ~AppData\Local\nvim
+
+"set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"let &packpath = &runtimepath
+source ~/.vim/vimrc

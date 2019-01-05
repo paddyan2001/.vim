@@ -1,7 +1,3 @@
-if exists("g:autofun_vim")
-    finish
-endif
-let g:autofun_vim = 1
 
 func! FormatCode()
     exec "w"
@@ -20,13 +16,7 @@ endfunc
 func! Run()
     if &filetype == "python"
         exec "w"
-        if has('mac')
-            exec "!python3 %"
-        elseif has('unix')
-            exec "!clear&&python3 %"
-        elseif has('win64')||has('win32')
-            exec "below term python %"
-        endif
+        exec "!python3 %"
     endif
     if &filetype=="sh"
         exec "w"

@@ -1,7 +1,3 @@
-if exists("g:basic_vim")
-    finish
-endif
-let g:basic_vim = 1
 "-------basic setting------
 set termencoding=utf-8
 set encoding=utf-8
@@ -28,27 +24,23 @@ set autowriteall
 set modified
 set autoread
 set showtabline=2  "0,1,2显示标签栏
-set tabpagemax=15  "设置标签栏最大值
+set tabpagemax=10  "设置标签栏最大值
 set history=600     "多少次历史操作
 set lazyredraw
 set magic
-set wildmenu
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 "set cursorline
-set complete=.
+set complete=.,w,b,u
 set completeopt=menuone
-
-if has('wildmenu')
-    set nowildmenu
-    set wildmode=list:longest,full
-    set wildoptions=tagfile
-    set wildignorecase
-    set wildignore+=.git,.hg,.svn,.stversions,*.pyc,*.spl,*.o,*.out,*~,%*
-    set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store
-    set wildignore+=**/node_modules/**,**/bower_modules/**,*/.sass-cache/*
-    set wildignore+=application/vendor/**,**/vendor/ckeditor/**,media/vendor/**
-    set wildignore+=__pycache__,*.egg-info
-endif
+set nowildmenu
+set wildmode=list:longest,full
+set wildoptions=tagfile
+set wildignorecase
+set wildignore+=.git,.hg,.svn,.stversions,*.pyc,*.spl,*.o,*.out,*~,%*
+set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store
+set wildignore+=**/node_modules/**,**/bower_modules/**,*/.sass-cache/*
+set wildignore+=application/vendor/**,**/vendor/ckeditor/**,media/vendor/**
+set wildignore+=__pycache__,*.egg-info

@@ -1,7 +1,3 @@
-if exists("g:mappings_vim")
-    finish
-endif
-let g:mappings_vim = 1
 " Key-mappings
 "---------------------------------------------------------
 let mapleader=","
@@ -114,17 +110,14 @@ vnoremap <silent><Leader>w <Esc>:write<CR>
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
 cmap W!! w !sudo tee % >/dev/null
 
-" }}} Editor UI {{{
-" ---------
-
-" I like to :quit with 'q', shrug.
+nnoremap gq q
 nnoremap <silent> q :<C-u>:close<CR>
 nnoremap <silent> Q :<C-u>:quit!<CR>
+nnoremap <silent> <leader>q :<C-u>:qw!<CR>
 nnoremap <silent> \q :<C-u>:bd<CR>
 nnoremap <silent> \Q :<C-u>:bd!<CR>
 nnoremap <silent> <leader>q :<C-u>:quit<CR>
 
-nnoremap gQ @q
 
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
@@ -178,7 +171,7 @@ noremap \0 :tabn 10<cr>
 nnoremap <C-Left>  :vertical resize -3<CR>
 nnoremap <C-Right> :vertical resize +3<CR>
 
-if has('mac')
+if is_mac
 	" Open the macOS dictionary on current word
 	nmap <Leader>? :!open dict://<cword><CR><CR>
 
