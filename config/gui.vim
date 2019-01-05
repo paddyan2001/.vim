@@ -1,6 +1,5 @@
 "-------gui setting------
 set winaltkeys=no
-set macmeta
 set guioptions-=r
 set guioptions-=L
 set guioptions-=m
@@ -10,7 +9,7 @@ set guioptions-=e
 if g:is_mac
     set linespace=5
     set guifont=Hack:h16
-if g:is_win
+elseif g:is_win
     set linespace=8 "6 8
     set guifont=Hack:h12 "Consolas Fira_Code Hack
     set renderoptions=type:directx,renmode:5,taamode:1 "启用directx 渲染
@@ -35,3 +34,4 @@ if exists(':terminal')
     tnoremap <m-k> <c-w>k
     tnoremap <m-q> <c-\><c-n>
 endif
+
