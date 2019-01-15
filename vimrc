@@ -10,6 +10,22 @@ elseif has('win64')
     let g:is_win=1
 endif
 
+silent! python3 1
+
+let g:python_host_skip_check=1
+let g:python3_host_skip_check=1
+
+if is_mac
+    let g:python3_host_prog = '/usr/local/bin/python3'
+    let g:python_host_prog = '/usr/local/bin/python'
+elseif is_lin
+    let g:python3_host_prog='/usr/bin/python3'
+    let g:python_host_prog = '/usr/bin/python'
+elseif is_win
+    let g:python3_host_prog='~\AppData\Local\Programs\Python\Python37\python3'
+    let g:python_host_prog = ''
+endif
+
 exec 'source' '~/.vim/config/basic.vim'
 exec 'source' '~/.vim/config/mappings.vim'
 exec 'source' '~/.vim/config/schemeselect.vim'

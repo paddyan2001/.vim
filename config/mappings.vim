@@ -5,9 +5,9 @@ nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
-nmap \f :call FormatCode()<CR>
+nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
-nmap \s :call Sort()<CR>
+nmap \S :call Sort()<CR>
 
 " Non-standard {{{
 
@@ -116,7 +116,6 @@ nnoremap <silent> Q :<C-u>:quit!<CR>
 nnoremap <silent> <leader>q :<C-u>:qw!<CR>
 nnoremap <silent> \q :<C-u>:bd<CR>
 nnoremap <silent> \Q :<C-u>:bd!<CR>
-nnoremap <silent> <leader>q :<C-u>:quit<CR>
 
 
 " Toggle editor visuals
