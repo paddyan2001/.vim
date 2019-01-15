@@ -2,6 +2,7 @@ call plug#begin('~/vimplugged')
 
 if is_win
     Plug 'maralla/completor.vim'
+        let g:completor_complete_options = 'menuone,noselect'
         let g:completor_python_binary = g:python3_host_prog
         inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
         inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -41,6 +42,9 @@ Plug 'Yggdroot/LeaderF'
 		\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
 		\}
 Plug 'Yggdroot/indentLine'
+    let g:indentLine_color_term = 239
+    let g:indentLine_color_gui = '#A4E57E'
+    let g:indentLine_char = '┆'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
