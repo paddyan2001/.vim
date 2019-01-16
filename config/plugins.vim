@@ -33,8 +33,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+    let g:UltiSnipsJumpForwardTrigger="<c-n>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
 	let g:Lf_WildIgnore = {
