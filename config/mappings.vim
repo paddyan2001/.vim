@@ -5,6 +5,7 @@ nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
+nmap \c :pclose
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
@@ -113,7 +114,7 @@ cmap W!! w !sudo tee % >/dev/null
 nnoremap gq q
 nnoremap <silent> q :<C-u>:close<CR>
 nnoremap <silent> Q :<C-u>:quit!<CR>
-nnoremap <silent> <leader>q :<C-u>:qw!<CR>
+nnoremap <silent> <leader>q :<C-u>:wq<CR>
 nnoremap <silent> \q :<C-u>:bd<CR>
 nnoremap <silent> \Q :<C-u>:bd!<CR>
 

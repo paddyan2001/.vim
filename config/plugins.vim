@@ -1,5 +1,4 @@
 call plug#begin('~/vimplugged')
-
 if is_win
     Plug 'maralla/completor.vim'
         let g:completor_complete_options = 'menuone,noselect'
@@ -27,14 +26,7 @@ else
         vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
         nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
-
 Plug 'tpope/vim-surround'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-    let g:UltiSnipsUsePythonVersion = 3
-    let g:UltiSnipsExpandTrigger="<c-l>"
-    let g:UltiSnipsJumpForwardTrigger="<c-j>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
 	let g:Lf_WildIgnore = {
@@ -56,6 +48,8 @@ Plug 'easymotion/vim-easymotion'
 
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+    let g:pymode_python = 'python3'
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
