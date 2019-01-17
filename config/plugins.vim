@@ -27,10 +27,14 @@ else
         nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
 Plug 'SirVer/ultisnips'
+    let g:UltiSnipsSnippetDirectories=['~/.vim/snippets']
     let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
     let g:UltiSnipsJumpForwardTrigger="<c-j>"
     let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+    "let g:UltiSnipsExpandTrigger=""
+    "let g:UltiSnipsJumpForwardTrigger=""
+    "let g:UltiSnipsJumpBackwardTrigger=""
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'

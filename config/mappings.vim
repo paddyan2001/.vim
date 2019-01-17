@@ -5,7 +5,7 @@ nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
-nmap \c :pclose
+nmap \c :pclose<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
@@ -152,7 +152,6 @@ nnoremap <silent> \g  :<C-u>split<CR>
 nnoremap <silent> \v  :<C-u>vsplit<CR>
 nnoremap <silent> \t  :tabnew<CR>
 nnoremap <silent> \o  :<C-u>only<CR>
-nnoremap <silent> \c  :close<CR>
 nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
 
 "tabs control
