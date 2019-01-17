@@ -27,7 +27,8 @@ else
         nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
 Plug 'SirVer/ultisnips'
-    let g:UltiSnipsSnippetDirectories=['~/.vim/snippets']
+Plug 'honza/vim-snippets'
+    "let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets']
     let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
     let g:UltiSnipsJumpForwardTrigger="<c-j>"

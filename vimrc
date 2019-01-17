@@ -22,7 +22,7 @@ elseif is_lin
     let g:python3_host_prog='/usr/bin/python3'
     let g:python_host_prog = '/usr/bin/python'
 elseif is_win
-    let g:python3_host_prog='~\AppData\Local\Programs\Python\Python37\python3'
+    let g:python3_host_prog='~\AppData\Local\Programs\Python\Python37\python'
     let g:python_host_prog = ''
 endif
 

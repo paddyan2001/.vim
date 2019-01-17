@@ -112,11 +112,11 @@ vnoremap <silent><Leader>w <Esc>:write<CR>
 cmap W!! w !sudo tee % >/dev/null
 
 nnoremap gq q
-nnoremap <silent> q :<C-u>:close<CR>
-nnoremap <silent> Q :<C-u>:quit!<CR>
+nnoremap <silent> \q :<C-u>:close<CR>
+nnoremap <silent> \Q :<C-u>:quit!<CR>
 nnoremap <silent> <leader>q :<C-u>:wq<CR>
-nnoremap <silent> \q :<C-u>:bd<CR>
-nnoremap <silent> \Q :<C-u>:bd!<CR>
+nnoremap <silent> q :<C-u>:bd<CR>
+nnoremap <silent> Q :<C-u>:bd!<CR>
 
 
 " Toggle editor visuals
