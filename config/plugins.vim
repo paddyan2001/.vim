@@ -26,6 +26,11 @@ else
         vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
         nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
+Plug 'SirVer/ultisnips'
+    let g:UltiSnipsUsePythonVersion = 3
+    let g:UltiSnipsExpandTrigger="<c-l>"
+    let g:UltiSnipsJumpForwardTrigger="<c-j>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
