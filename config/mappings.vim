@@ -6,6 +6,7 @@ nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
 nmap \c :pclose<CR>
+nmap \o :only<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
