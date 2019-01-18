@@ -24,6 +24,7 @@ elseif is_lin
 elseif is_win
     let g:python3_host_prog='~\AppData\Local\Programs\Python\Python37\python'
     let g:python_host_prog = ''
+    let g:node_path='C:\Program Files\nodejs\node.exe'
 endif
 
 exec 'source' '~/.vim/config/basic.vim'

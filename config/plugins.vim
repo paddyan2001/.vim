@@ -1,32 +1,32 @@
 call plug#begin('~/vimplugged')
-"if is_win
-    "Plug 'maralla/completor.vim'
-        "let g:completor_complete_options = 'menuone,noselect'
-        "let g:completor_python_binary = g:python3_host_prog
-        "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-        "inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"else
-    "Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
-        "let g:ycm_server_python_interpreter = g:python3_host_prog
-        "let g:ycm_path_to_python_interpreter = g:python3_host_prog
-        "let g:ycm_python_binary_path = g:python3_host_prog
-        "let g:ycm_key_invoke_completion = '<c-h>'
-        "let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
-        "let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
-        "let g:ycm_seed_identifiers_with_syntax=1
-        "let g:ycm_complete_in_comments = 1
-        "let g:ycm_complete_in_strings = 1
-        "let g:ycm_key_list_stop_completion = ['<CR>']
-        "let g:ycm_max_diagnostics_to_display=16
-        "let g:ycm_max_num_candidates = 30
-        "let g:ycm_error_symbol = '❌'
-        "let g:ycm_warning_symbol = '！'
-        "nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        "imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        "vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        "nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"endif
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+if is_win
+    Plug 'maralla/completor.vim'
+        let g:completor_node_binary = g:node_path
+        let g:completor_complete_options = 'menuone,noselect'
+        let g:completor_python_binary = g:python3_host_prog
+        inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+else
+    Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
+        let g:ycm_server_python_interpreter = g:python3_host_prog
+        let g:ycm_path_to_python_interpreter = g:python3_host_prog
+        let g:ycm_python_binary_path = g:python3_host_prog
+        let g:ycm_key_invoke_completion = '<c-h>'
+        let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
+        let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
+        let g:ycm_seed_identifiers_with_syntax=1
+        let g:ycm_complete_in_comments = 1
+        let g:ycm_complete_in_strings = 1
+        let g:ycm_key_list_stop_completion = ['<CR>']
+        let g:ycm_max_diagnostics_to_display=16
+        let g:ycm_max_num_candidates = 30
+        let g:ycm_error_symbol = '❌'
+        let g:ycm_warning_symbol = '！'
+        nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+        imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+        vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+        nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
+endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     "let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets']
