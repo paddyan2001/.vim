@@ -60,9 +60,9 @@ Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
         let g:pymode_rope_completion = 1
         let g:pymode_rope_complete_on_dot = 1
         let g:pymode_rope_completion_bind = '<c-h>'
+        inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     endif
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
