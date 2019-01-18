@@ -1,12 +1,5 @@
 call plug#begin('~/vimplugged')
-if is_win
-    Plug 'maralla/completor.vim'
-        let g:completor_node_binary = g:node_path
-        let g:completor_complete_options = 'menuone,noselect'
-        let g:completor_python_binary = g:python3_host_prog
-        inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-else
+if is_win==0
     Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
         let g:ycm_server_python_interpreter = g:python3_host_prog
         let g:ycm_path_to_python_interpreter = g:python3_host_prog
@@ -29,7 +22,6 @@ else
 endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-    "let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets']
     let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
     let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -61,6 +53,16 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_python = 'python3'
+    let g:pymode_rope = 1
+    let g:pymode_rope_autoimport = 1
+    let g:pymode_rope_autoimport_import_after_complete = 1
+    if is_win
+        let g:pymode_rope_completion = 1
+        let g:pymode_rope_complete_on_dot = 1
+        let g:pymode_rope_completion_bind = '<c-h>'
+    endif
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
