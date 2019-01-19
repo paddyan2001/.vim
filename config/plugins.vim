@@ -58,7 +58,7 @@ Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_rope_autoimport_import_after_complete = 1
     let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
     let g:pymode_lint_checkers = ['pyflakes']    
-    let g:pymode_lint_cwindow = 1
+    let g:pymode_lint_cwindow = 0
     if is_win
         let g:pymode_rope_completion = 1
         let g:pymode_rope_complete_on_dot = 1
