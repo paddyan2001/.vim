@@ -10,7 +10,7 @@ elseif has('win64')
     let g:is_win=1
 endif
 
-silent! python3 1
+"silent! python3 1
 
 let g:python_host_skip_check=1
 let g:python3_host_skip_check=1
