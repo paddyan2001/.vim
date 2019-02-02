@@ -5,7 +5,7 @@ nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
-nmap <esc> :pclose<CR>:cclose<CR>
+nmap <M-c> :pclose<CR>:cclose<CR>
 nmap \o :only<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>

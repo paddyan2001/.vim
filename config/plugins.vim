@@ -19,10 +19,6 @@ if is_win==0
         imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
         vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
         nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"else
-"    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()},'for':['python','html','vim','javascript','typescript']}
-"        inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -63,13 +59,6 @@ Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
     let g:pymode_lint_checkers = ['pyflakes']    
     let g:pymode_lint_cwindow = 0
-    if is_win
-        let g:pymode_rope_completion = 1
-        let g:pymode_rope_complete_on_dot = 1
-        let g:pymode_rope_completion_bind = '<c-h>'
-        inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-    endif
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
