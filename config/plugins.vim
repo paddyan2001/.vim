@@ -45,8 +45,8 @@ Plug 'Yggdroot/LeaderF'
 		\}
 Plug 'Yggdroot/indentLine'
     let g:indentLine_color_term = 239
-    let g:indentLine_color_gui = '#A4E57E'
-    let g:indentLine_char = '┆'
+    let g:indentLine_color_gui = '#555555'
+    let g:indentLine_char = '|'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
@@ -58,7 +58,7 @@ Plug 'easymotion/vim-easymotion'
 
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
-if is_win:
+if is_win
     Plug 'davidhalter/jedi-vim'
         let g:jedi#goto_command = "<leader>d"
         let g:jedi#goto_assignments_command = "<leader>g"
@@ -69,6 +69,7 @@ if is_win:
         let g:jedi#rename_command = "<leader>r"
 endif
 Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
+    nmap <leader>R :PymodeRun<CR>
     let g:pymode_python = 'python3'
     let g:pymode_rope = 1
     let g:pymode_rope_autoimport = 1
