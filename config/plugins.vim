@@ -58,6 +58,16 @@ Plug 'easymotion/vim-easymotion'
 
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
+if is_win:
+    Plug 'davidhalter/jedi-vim'
+        let g:jedi#goto_command = "<leader>d"
+        let g:jedi#goto_assignments_command = "<leader>g"
+        let g:jedi#goto_definitions_command = ""
+        let g:jedi#documentation_command = "K"
+        let g:jedi#usages_command = "<leader>n"
+        let g:jedi#completions_command = "<C-h>"
+        let g:jedi#rename_command = "<leader>r"
+endif
 Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_python = 'python3'
     let g:pymode_rope = 1
@@ -66,6 +76,6 @@ Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
     let g:pymode_lint_checkers = ['pyflakes']    
     let g:pymode_lint_cwindow = 0
-Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
-Plug 'mattn/emmet-vim',{'for':'html'}
+"Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
+"Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
