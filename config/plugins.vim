@@ -66,10 +66,9 @@ if is_win
         let g:jedi#documentation_command = "K"
         let g:jedi#usages_command = "<leader>n"
         let g:jedi#completions_command = "<C-h>"
-        let g:jedi#rename_command = "<leader>r"
+        let g:jedi#rename_command = "<leader>c"
 endif
 Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
-    nmap <leader>R :PymodeRun<CR>
     let g:pymode_python = 'python3'
     let g:pymode_rope = 1
     let g:pymode_rope_autoimport = 1
