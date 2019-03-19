@@ -15,8 +15,8 @@ if is_win==0
         let g:ycm_cache_omnifunc = 1
         let g:ycm_max_diagnostics_to_display=30
         let g:ycm_disable_for_files_larger_than_kb = 50000
-        let g:ycm_key_list_select_completion = ['<C-n>', '<C-j>']
-        let g:ycm_key_list_previous_completion = ['<C-p>', '<C-k>']
+        let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+        let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
         let g:ycm_key_list_stop_completion = ['<CR>']
         let g:ycm_max_diagnostics_to_display=16
         let g:ycm_max_num_candidates = 30
@@ -64,6 +64,8 @@ if is_win
         let g:jedi#goto_assignments_command = "<leader>g"
         let g:jedi#goto_definitions_command = ""
         let g:jedi#documentation_command = "K"
+        let g:jedi#popup_select_first = 1
+        let g:jedi#show_call_signatures = "1"
         let g:jedi#usages_command = "<leader>n"
         let g:jedi#completions_command = "<C-h>"
         let g:jedi#rename_command = "<leader>c"
