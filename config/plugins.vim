@@ -1,32 +1,30 @@
 call plug#begin('~/vimplugged')
-if is_win==0
-    Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
-        let g:ycm_server_python_interpreter = g:python3_host_prog
-        let g:ycm_path_to_python_interpreter = g:python3_host_prog
-        let g:ycm_python_binary_path = g:python3_host_prog
-        let g:ycm_key_invoke_completion = '<c-h>'
-        let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
-        let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
-        let g:ycm_seed_identifiers_with_syntax=1
-        let g:ycm_complete_in_comments = 1
-        let g:ycm_complete_in_strings = 1
-        let g:ycm_min_num_of_chars_for_completion =2
-        let g:ycm_use_ultisnips_completer = 1
-        let g:ycm_cache_omnifunc = 1
-        let g:ycm_max_diagnostics_to_display=30
-        let g:ycm_disable_for_files_larger_than_kb = 50000
-        let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
-        let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
-        let g:ycm_key_list_stop_completion = ['<CR>']
-        let g:ycm_max_diagnostics_to_display=16
-        let g:ycm_max_num_candidates = 30
-        let g:ycm_error_symbol = '❌'
-        let g:ycm_warning_symbol = '！'
-        nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
-endif
+Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
+    let g:ycm_server_python_interpreter = g:python3_host_prog
+    let g:ycm_path_to_python_interpreter = g:python3_host_prog
+    let g:ycm_python_binary_path = g:python3_host_prog
+    let g:ycm_key_invoke_completion = '<c-h>'
+    let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
+    let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
+    let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_complete_in_comments = 1
+    let g:ycm_complete_in_strings = 1
+    let g:ycm_min_num_of_chars_for_completion =2
+    let g:ycm_use_ultisnips_completer = 1
+    let g:ycm_cache_omnifunc = 1
+    let g:ycm_max_diagnostics_to_display=30
+    let g:ycm_disable_for_files_larger_than_kb = 50000
+    let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+    let g:ycm_key_list_stop_completion = ['<CR>']
+    let g:ycm_max_diagnostics_to_display=16
+    let g:ycm_max_num_candidates = 30
+    let g:ycm_error_symbol = '❌'
+    let g:ycm_warning_symbol = '！'
+    nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
@@ -58,18 +56,6 @@ Plug 'easymotion/vim-easymotion'
 
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
-if is_win
-    Plug 'davidhalter/jedi-vim'
-        let g:jedi#goto_command = "<leader>d"
-        let g:jedi#goto_assignments_command = "<leader>g"
-        let g:jedi#goto_definitions_command = ""
-        let g:jedi#documentation_command = "K"
-        let g:jedi#popup_select_first = 1
-        let g:jedi#show_call_signatures = "1"
-        let g:jedi#usages_command = "<leader>n"
-        let g:jedi#completions_command = "<C-h>"
-        let g:jedi#rename_command = "<leader>c"
-endif
 Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_python = 'python3'
     let g:pymode_rope = 1
@@ -78,6 +64,6 @@ Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
     let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
     let g:pymode_lint_checkers = ['pyflakes']    
     let g:pymode_lint_cwindow = 0
-"Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
+Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 "Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
