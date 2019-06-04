@@ -16,8 +16,7 @@ Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typesc
     let g:ycm_disable_for_files_larger_than_kb = 50000
     let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
-    let g:ycm_key_list_stop_completion = ['<CR>']
-    let g:ycm_max_diagnostics_to_display=16
+    let g:ycm_max_diagnostics_to_display=20
     let g:ycm_max_num_candidates = 30
     let g:ycm_error_symbol = '❌'
     let g:ycm_warning_symbol = '！'
@@ -28,12 +27,9 @@ Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typesc
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
-    let g:UltiSnipsExpandTrigger="<c-l>"
-    let g:UltiSnipsJumpForwardTrigger="<c-j>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-    "let g:UltiSnipsExpandTrigger=""
-    "let g:UltiSnipsJumpForwardTrigger=""
-    "let g:UltiSnipsJumpBackwardTrigger=""
+    let g:UltiSnipsExpandTrigger="<cr>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/LeaderF'
 	let g:Lf_ShortcutF = '<leader>f'
