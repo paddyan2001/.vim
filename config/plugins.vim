@@ -27,7 +27,7 @@ Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typesc
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
-    let g:UltiSnipsExpandTrigger="<cr>"
+    let g:UltiSnipsExpandTrigger="<c-l>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'tpope/vim-surround'
