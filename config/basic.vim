@@ -32,6 +32,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set relativenumber
 "set cursorline
 set complete=.,w,b,u
 set completeopt=menuone
