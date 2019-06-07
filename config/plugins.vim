@@ -37,16 +37,12 @@ Plug 'Yggdroot/LeaderF'
 		\ 'dir': ['.svn','.git','.hg','.*'],
 		\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
 		\}
-Plug 'Yggdroot/indentLine'
-    let g:indentLine_color_term = 239
-    let g:indentLine_color_gui = '#555555'
-    let g:indentLine_char = '|'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 	"autocmd vimenter * NERDTree
 	map <C-t> :NERDTreeToggle<CR>
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 Plug 'easymotion/vim-easymotion'
     nmap \ <Plug>(easymotion-prefix)
 
