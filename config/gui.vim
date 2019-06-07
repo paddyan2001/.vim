@@ -16,23 +16,3 @@ elseif g:is_win
 "    autocmd GUIEnter * simalt ~x "启动最大化
     cd ~/code/py
 endif
-
-"window control
-noremap <m-h> <c-w>h
-noremap <m-l> <c-w>l
-noremap <m-j> <c-w>j
-noremap <m-k> <c-w>k
-inoremap <m-h> <esc><c-w>h
-inoremap <m-l> <esc><c-w>l
-inoremap <m-j> <esc><c-w>j
-inoremap <m-k> <esc><c-w>k
-
-"terminal control
-if exists(':terminal')
-    tnoremap <m-h> <c-w>h
-    tnoremap <m-l> <c-w>l
-    tnoremap <m-j> <c-w>j
-    tnoremap <m-k> <c-w>k
-    tnoremap <m-q> <c-\><c-n>
-endif
-

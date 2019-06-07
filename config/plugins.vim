@@ -48,14 +48,6 @@ Plug 'easymotion/vim-easymotion'
 
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
-Plug 'python-mode/python-mode', { 'branch': 'develop','for':'python' }
-    let g:pymode_python = 'python3'
-    let g:pymode_rope = 1
-    let g:pymode_rope_autoimport = 1
-    let g:pymode_rope_autoimport_import_after_complete = 1
-    let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
-    let g:pymode_lint_checkers = ['pyflakes']    
-    let g:pymode_lint_cwindow = 0
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 "Plug 'mattn/emmet-vim',{'for':'html'}
 call plug#end()
