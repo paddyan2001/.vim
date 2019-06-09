@@ -13,9 +13,8 @@ nmap \S :call Sort()<CR>
 
 " Non-standard {{{
 
-" Double leader key for toggling visual-line mode
-nmap <silent> <Leader><Leader> V
 vmap <Leader><Leader> <Esc>
+imap <Leader><Leader> <Esc>
 
 " Change current word in a repeatable manner
 nnoremap cn *``cgn
@@ -106,6 +105,7 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Fast saving
 nnoremap <silent><Leader>w :write<CR>
+imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
 
 " Save a file with sudo

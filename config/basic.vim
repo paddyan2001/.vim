@@ -26,7 +26,7 @@ set autoread
 set showtabline=2  "0,1,2显示标签栏
 set tabpagemax=10  "设置标签栏最大值
 set history=600     "多少次历史操作
-set lazyredraw
+"set lazyredraw
 set magic
 set hlsearch
 set incsearch

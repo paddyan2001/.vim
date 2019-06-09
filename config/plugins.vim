@@ -31,21 +31,22 @@ Plug 'honza/vim-snippets'
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'tpope/vim-surround'
-Plug 'Yggdroot/LeaderF'
-	let g:Lf_ShortcutF = '<leader>f'
-	let g:Lf_WildIgnore = {
-		\ 'dir': ['.svn','.git','.hg','.*'],
-		\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
-		\}
+"Plug 'Yggdroot/LeaderF'
+	"let g:Lf_ShortcutF = '<leader>f'
+	"let g:Lf_WildIgnore = {
+		"\ 'dir': ['.svn','.git','.hg','.*'],
+		"\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+		"\}
 Plug 'scrooloose/nerdcommenter'
 "Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
-	"autocmd vimenter * NERDTree
-	map <C-t> :NERDTreeToggle<CR>
 "Plug 'mhinz/vim-startify'
 Plug 'easymotion/vim-easymotion'
     nmap \ <Plug>(easymotion-prefix)
 
+"------For searching------
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
