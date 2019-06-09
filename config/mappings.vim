@@ -16,14 +16,6 @@ nmap \S :call Sort()<CR>
 vmap <Leader><Leader> <Esc>
 imap <Leader><Leader> <Esc>
 
-" Change current word in a repeatable manner
-nnoremap cn *``cgn
-nnoremap cN *``cgN
-
-" Change selected word in a repeatable manner
-vnoremap <expr> cn "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>" . "``cgn"
-vnoremap <expr> cN "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>" . "``cgN"
-
 nnoremap cp yap<S-}>p
 nnoremap <leader>a =ip
 
@@ -43,7 +35,7 @@ nnoremap ! :!
 
 " Allow misspellings
 cnoreabbrev qw wq
-cnoreabbrev bd bd
+cnoreabbrev db bd
 
 " Start new line from any cursor position
 inoremap <C-Return> <esc>o
@@ -63,26 +55,6 @@ noremap <expr> <C-b> max([winheight(0) - 2, 1])
 	\ ."\<C-u>".(line('w0') <= 1 ? "H" : "M")
 noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
-
-" Window control
-if exists(':terminal') && has('vim')
-    set termwinkey=<c-w>
-endif
-nnoremap <C-x> <C-w>x<C-w>w
-nnoremap <silent><C-w>z :vert resize<CR>:resize<CR>:normal! ze<CR>
-
-" Select blocks after indenting
-xnoremap < <gv
-xnoremap > >gv|
-
-" Use tab for indenting
-vnoremap <Tab> >gv|
-vnoremap <S-Tab> <gv
-nmap <Tab>   >>_
-nmap <S-Tab> <<_
-
-" Select last paste
-nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
 " Navigation in command line
 cnoremap <C-l> <End>
