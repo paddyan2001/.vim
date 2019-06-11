@@ -18,21 +18,23 @@ set showmatch       "高亮括号匹配
 set matchtime=2     "高亮括号时间是十分之n秒
 set scrolloff=3     "光标移动到buffer的顶部和底部时保持3行距离
 set nobackup        "禁止生成临时文件
-set nowb
+set hidden
+set nowritebackup
 set noswapfile      "禁止生成交换文件
 set autowriteall
 set modified
 set autoread
-set showtabline=2  "0,1,2显示标签栏
+set showtabline=1  "0,1,2显示标签栏
 set tabpagemax=10  "设置标签栏最大值
 set history=600     "多少次历史操作
+set shortmess+=c
 "set lazyredraw
 set magic
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set relativenumber
+"set relativenumber
 "set cursorline
 set complete=.,w,b,u
 set completeopt=menuone
