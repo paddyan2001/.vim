@@ -1,111 +1,42 @@
 call plug#begin('~/vimplugged')
-"------For completion------
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-h> to trigger completion.
-inoremap <silent><expr> <c-h> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-"------For snippets------
+Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
+    let g:ycm_server_python_interpreter = g:python3_host_prog
+    let g:ycm_path_to_python_interpreter = g:python3_host_prog
+    let g:ycm_python_binary_path = g:python3_host_prog
+    let g:ycm_key_invoke_completion = '<c-h>'
+    let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
+    let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
+    let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_complete_in_comments = 1
+    let g:ycm_complete_in_strings = 1
+    let g:ycm_min_num_of_chars_for_completion =2
+    let g:ycm_use_ultisnips_completer = 1
+    let g:ycm_cache_omnifunc = 1
+    let g:ycm_max_diagnostics_to_display=30
+    let g:ycm_disable_for_files_larger_than_kb = 50000
+    let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+    let g:ycm_max_diagnostics_to_display=20
+    let g:ycm_max_num_candidates = 30
+    let g:ycm_error_symbol = '❌'
+    let g:ycm_warning_symbol = '！'
+    nmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    imap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    vmap <f12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nmap \yy :YcmCompleter GoToDefinitionElseDeclaration<CR>
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+    let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-    let g:UltiSnipsEditSplit="vertical"
-
-"------For other------
 Plug 'tpope/vim-surround'
+"Plug 'Yggdroot/LeaderF'
+	"let g:Lf_ShortcutF = '<leader>f'
+	"let g:Lf_WildIgnore = {
+		"\ 'dir': ['.svn','.git','.hg','.*'],
+		"\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+		"\}
 Plug 'scrooloose/nerdcommenter'
 "Plug 'tpope/vim-fugitive'
 "Plug 'mhinz/vim-startify'
@@ -116,7 +47,6 @@ Plug 'easymotion/vim-easymotion'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
-
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
