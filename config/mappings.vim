@@ -17,7 +17,6 @@ vmap <Leader><Leader> <Esc>
 imap <Leader><Leader> <Esc>
 
 nnoremap cp yap<S-}>p
-nnoremap <leader>a =ip
 
 " Toggle fold
 nnoremap <CR> za
