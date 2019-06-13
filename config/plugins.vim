@@ -50,6 +50,7 @@ Plug 'junegunn/fzf.vim'
     imap <leader>f :FZF<cr>
 Plug 'rking/ag.vim'
     nmap <leader>a :Ag<space>
+    imap <leader>a :Ag<space>
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
