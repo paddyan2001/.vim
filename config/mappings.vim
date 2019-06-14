@@ -14,7 +14,7 @@ nmap \S :call Sort()<CR>
 " Non-standard {{{
 
 vmap <Leader><Leader> <Esc>
-imap <Leader><Leader> <Esc>
+imap ,, <Esc>
 
 nnoremap cp yap<S-}>p
 
