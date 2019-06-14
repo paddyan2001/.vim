@@ -47,10 +47,10 @@ Plug 'easymotion/vim-easymotion'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
     nmap <leader>f :FZF<cr>
-    imap <leader>f :FZF<cr>
+    imap <leader>f <ESC>:FZF<cr>
 Plug 'rking/ag.vim'
     nmap <leader>a :Ag<space>
-    imap <leader>a :Ag<space>
+    imap <leader>a <ESC>:Ag<space>
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
