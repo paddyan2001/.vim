@@ -42,19 +42,6 @@ inoremap <C-Return> <esc>o
 " Quick substitute within selected area
 xnoremap s :s//g<Left><Left>
 
-nnoremap zl z5l
-nnoremap zh z5h
-
-" Improve scroll, credits: https://github.com/Shougo
-nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?
-	\ 'zt' : (winline() == 1) ? 'zb' : 'zz'
-noremap <expr> <C-f> max([winheight(0) - 2, 1])
-	\ ."\<C-d>".(line('w$') >= line('$') ? "L" : "M")
-noremap <expr> <C-b> max([winheight(0) - 2, 1])
-	\ ."\<C-u>".(line('w0') <= 1 ? "H" : "M")
-noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
-noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
-
 " Navigation in command line
 cnoremap <C-l> <End>
 cnoremap <C-f> <Right>
@@ -78,10 +65,6 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 nnoremap <silent><Leader>w :write<CR>
 imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
-
-" Save a file with sudo
-" http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
-cmap W!! w !sudo tee % >/dev/null
 
 nnoremap gq q
 nnoremap <silent> \q :<C-u>:close<CR>

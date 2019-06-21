@@ -51,8 +51,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
     nmap <leader>a :Ag<space>
     imap <leader>a <ESC>:Ag<space>
+
 "------For ProgramLanguage------
 "Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 "Plug 'mattn/emmet-vim',{'for':'html'}
+
 call plug#end()
