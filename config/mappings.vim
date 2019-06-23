@@ -67,9 +67,8 @@ imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
 
 nnoremap gq q
-nnoremap <silent> \q :<C-u>:close<CR>
-nnoremap <silent> <leader>q :<C-u>:wq<CR>
-nnoremap <silent> <leader>Q :<C-u>:q!<CR>
+nnoremap <silent> \q :q<CR>
+nnoremap <silent> <leader>q :<C-u>:q!<CR>
 nnoremap <silent> q :<C-u>:bd<CR>
 nnoremap <silent> Q :<C-u>:bd!<CR>
 
