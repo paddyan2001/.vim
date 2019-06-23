@@ -22,6 +22,10 @@ endif
 exec 'source' '~/.vim/config/basic.vim'
 exec 'source' '~/.vim/config/mappings.vim'
 exec 'source' '~/.vim/config/schemeselect.vim'
-exec 'source' '~/.vim/config/plugins.vim'
 exec 'source' '~/.vim/config/autofun.vim'
 exec 'source' '~/.vim/config/gui.vim'
+if is_mac || is_lin
+    exec 'source' '~/.vim/config/plugins.vim'
+else
+    exec 'source' '~/.vim/config/plugins_win.vim'
+endif

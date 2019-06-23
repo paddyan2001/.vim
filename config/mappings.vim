@@ -108,6 +108,10 @@ nnoremap <silent> \v  :<C-u>vsplit<CR>
 nnoremap <silent> \t  :tabnew<CR>
 nnoremap <silent> \o  :<C-u>only<CR>
 nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
 
 "tabs control
 noremap \1 :tabn 1<cr>
