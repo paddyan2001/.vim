@@ -1,8 +1,8 @@
 call plug#begin('~/vimplugged')
 Plug 'Valloric/YouCompleteMe',{'for':['python','html','vim','javascript','typescript']}
-    let g:ycm_server_python_interpreter = g:python3_host_prog
-    let g:ycm_path_to_python_interpreter = g:python3_host_prog
-    let g:ycm_python_binary_path = g:python3_host_prog
+    let g:ycm_server_python_interpreter = python3_host_prog
+    let g:ycm_path_to_python_interpreter = python3_host_prog
+    let g:ycm_python_binary_path = python3_host_prog
     let g:ycm_key_invoke_completion = '<c-h>'
     let g:ycm_filetype_whitelist = {"html":1,"python":1,"vim":1,"javascript":1 ,"typescript":1}
     let g:ycm_filetype_blacklist = {'tagbar':1,'gitcommit':1}
