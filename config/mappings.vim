@@ -69,7 +69,7 @@ vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap gq q
 nnoremap <silent> <leader>q :<C-u>:wq<CR>
 nnoremap <silent> q :<C-u>:q<CR>
-nnoremap <silent> Q :<C-u>:Q!<CR>
+nnoremap <silent> Q :<C-u>:q!<CR>
 
 nnoremap <silent> <leader>d bd<CR>
 nnoremap <silent> <leader>D bd!<CR>
