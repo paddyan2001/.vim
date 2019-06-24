@@ -67,11 +67,12 @@ imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
 
 nnoremap gq q
-nnoremap <silent> \q :q<CR>
-nnoremap <silent> <leader>q :<C-u>:q!<CR>
-nnoremap <silent> q :<C-u>:bd<CR>
-nnoremap <silent> Q :<C-u>:bd!<CR>
+nnoremap <silent> <leader>q :<C-u>:wq<CR>
+nnoremap <silent> q :<C-u>:q<CR>
+nnoremap <silent> Q :<C-u>:Q!<CR>
 
+nnoremap <silent> <leader>d bd<CR>
+nnoremap <silent> <leader>D bd!<CR>
 
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
