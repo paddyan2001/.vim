@@ -74,9 +74,6 @@ nnoremap gq q
 nnoremap <silent> q :<C-u>:bd<CR>
 nnoremap <silent> Q :<C-u>:bd!<CR>
 
-nnoremap <silent> \d bd<CR>
-nnoremap <silent> \D bd!<CR>
-
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
 nmap <silent> <Leader>nn :setlocal nonumber!<CR>
