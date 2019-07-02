@@ -66,12 +66,13 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 nnoremap <silent><Leader>w :write<CR>
 imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
+nnoremap <silent><Leader>W :wa<CR>
+imap <silent><Leader>W <esc>:wa<CR>
+vnoremap <silent><Leader>W <Esc>:wa<CR>
 
 nnoremap gq q
-nnoremap <silent> <leader>q :<C-u>:wq<CR>
 nnoremap <silent> q :<C-u>:bd<CR>
 nnoremap <silent> Q :<C-u>:bd!<CR>
-nnoremap <silent> <c-q> :qa!<CR>
 
 nnoremap <silent> \d bd<CR>
 nnoremap <silent> \D bd!<CR>
