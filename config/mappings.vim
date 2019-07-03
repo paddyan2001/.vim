@@ -62,10 +62,8 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Fast saving
 nnoremap <silent><Leader>w :write<CR>
-imap <silent><Leader>w <esc>:write<CR>
 vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap <silent><Leader>W :wa<CR>
-imap <silent><Leader>W <esc>:wa<CR>
 vnoremap <silent><Leader>W <Esc>:wa<CR>
 
 nnoremap gq q
