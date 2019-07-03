@@ -10,11 +10,6 @@ nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
 
-" Non-standard {{{
-
-vmap <Leader><Leader> <Esc>
-imap <Leader><Leader> <Esc>
-
 nnoremap cp yap<S-}>p
 
 " Toggle fold
