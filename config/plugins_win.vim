@@ -1,7 +1,6 @@
 call plug#begin('~/vimplugged')
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/LeaderF'
-    imap <leader>f <ESC><leader>f
     let g:Lf_ShortcutF = '<leader>f'
     let g:Lf_WildIgnore = {
         \ 'dir': ['.svn','.git','.hg','.*'],
