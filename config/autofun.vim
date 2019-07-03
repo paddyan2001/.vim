@@ -17,7 +17,7 @@ func! Run()
     if &filetype == "python"
         exec "w"
         if is_win
-            exec 'below term python3 %'
+            exec "below term python3 %"
         else
             exec "!python3 %"
         endif
