@@ -6,7 +6,6 @@ nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
 nmap \c :pclose<CR>:cclose<CR>
-nmap \o :only<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
@@ -71,6 +70,7 @@ vnoremap <silent><Leader>W <Esc>:wa<CR>
 
 nnoremap gq q
 nnoremap <silent> q :<C-u>:close<CR>
+nnoremap <silent> Q :<C-u>:only<CR>
 nnoremap <silent> \b :<C-u>:bd<CR>
 nnoremap <silent> \B :<C-u>:bd!<CR>
 
