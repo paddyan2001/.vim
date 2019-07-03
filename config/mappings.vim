@@ -6,7 +6,6 @@ nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
 nmap \c :pclose<CR>:cclose<CR>
-nmap \C :close<CR>
 nmap \o :only<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
@@ -71,8 +70,9 @@ imap <silent><Leader>W <esc>:wa<CR>
 vnoremap <silent><Leader>W <Esc>:wa<CR>
 
 nnoremap gq q
-nnoremap <silent> q :<C-u>:bd<CR>
-nnoremap <silent> Q :<C-u>:bd!<CR>
+nnoremap <silent> q :<C-u>:close<CR>
+nnoremap <silent> \b :<C-u>:bd<CR>
+nnoremap <silent> \B :<C-u>:bd!<CR>
 
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
