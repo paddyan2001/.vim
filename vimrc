@@ -24,8 +24,8 @@ exec 'source' '~/.vim/config/mappings.vim'
 exec 'source' '~/.vim/config/schemeselect.vim'
 exec 'source' '~/.vim/config/autofun.vim'
 exec 'source' '~/.vim/config/gui.vim'
-if is_mac || is_lin
-    exec 'source' '~/.vim/config/plugins.vim'
-else
+if is_win
     exec 'source' '~/.vim/config/plugins_win.vim'
+else
+    exec 'source' '~/.vim/config/plugins.vim'
 endif
