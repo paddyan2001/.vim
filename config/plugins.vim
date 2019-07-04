@@ -28,8 +28,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
     let g:UltiSnipsUsePythonVersion = 3
     let g:UltiSnipsExpandTrigger="<c-l>"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-j>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plug 'tpope/vim-surround'
 "Plug 'Yggdroot/LeaderF'
 	"let g:Lf_ShortcutF = '<leader>f'
