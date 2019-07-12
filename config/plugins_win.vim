@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
     nmap \ <Plug>(easymotion-prefix)
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'，'for':['python','javascript','typescript']}
+Plug 'neoclide/coc.nvim', {'branch': 'release','for':['python','javascript','typescript']}
     " Use tab for trigger completion with characters ahead and navigate.
     " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
     inoremap <silent><expr> <TAB>
