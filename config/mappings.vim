@@ -5,7 +5,18 @@ nmap ; :
 nmap <space>[ O<esc>j
 nmap <space>] o<esc>k
 
-nmap \c :pclose<CR>:cclose<CR>
+" s: Windows and buffers {{{
+
+nnoremap <silent> \t  :tabnew<CR>
+nnoremap <silent> \o  :<C-u>only<CR>
+nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
+
+nmap \z :pclose<CR>:cclose<CR>
+nmap \v :call Compile()<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
@@ -93,18 +104,6 @@ vnoremap mk :m-2<CR>gv=gv
 vnoremap mj :m'>+<CR>gv=gv
 noremap  mk :m-2<CR>
 noremap  mj :m+<CR>
-
-" s: Windows and buffers {{{
-
-nnoremap <silent> \g  :<C-u>split<CR>
-nnoremap <silent> \v  :<C-u>vsplit<CR>
-nnoremap <silent> \t  :tabnew<CR>
-nnoremap <silent> \o  :<C-u>only<CR>
-nnoremap <silent> \x  :<C-u>call <SID>BufferEmpty()<CR>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-nnoremap <c-h> <c-w>h
 
 "tabs control
 noremap \1 :tabn 1<cr>

@@ -13,6 +13,13 @@ func! Sort()
     endif
 endfunc
 
+func! Compile()
+    if &filetype=="c"
+        exec "w"
+        exec "!clang %"
+    endif
+endfunc
+
 func! Run()
     if &filetype == "python"
         exec "w"
@@ -24,7 +31,7 @@ func! Run()
         exec "!./%"
     endif
     if &filetype=="c"
-        exec "!./%<"
+        exec "!./%<.out"
     endif
     if &filetype=="java"
         exec "below term java %<"
