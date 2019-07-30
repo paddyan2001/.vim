@@ -13,10 +13,17 @@ func! Sort()
     endif
 endfunc
 
+func! Make()
+    if &filetype=="c"
+        exec 'make'
+    endif
+endfunc
+
 func! Compile()
     if &filetype=="c"
         exec "w"
-        exec "!clang %"
+        "exec '!clang %'
+        exec 'below term clang %'
     endif
 endfunc
 
@@ -31,7 +38,8 @@ func! Run()
         exec "!./%"
     endif
     if &filetype=="c"
-        exec "!./%<.out"
+        "exec '!./%<.out'
+        exec "below term ./%<.out"
     endif
     if &filetype=="java"
         exec "below term java %<"

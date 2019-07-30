@@ -26,7 +26,8 @@ Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
 "Plug 'mattn/emmet-vim',{'for':'html'}
 
 
-Plug 'neoclide/coc.nvim', {'branch': 'release','for':['python','javascript','typescript','c','cpp']}
+"Plug 'neoclide/coc.nvim', {'branch': 'release','for':['python','javascript','typescript','c','cpp']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Use tab for trigger completion with characters ahead and navigate.
     " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
     inoremap <silent><expr> <TAB>

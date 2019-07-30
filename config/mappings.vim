@@ -15,11 +15,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
-nmap \z :pclose<CR>:cclose<CR>
+nmap \x :pclose<CR>:cclose<CR>
 nmap \c :call Compile()<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
+nmap \v :call Make()<CR>
 
 nnoremap cp yap<S-}>p
 
