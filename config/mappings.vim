@@ -73,11 +73,11 @@ vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap <silent><Leader>W :wa<CR>
 vnoremap <silent><Leader>W <Esc>:wa<CR>
 
+nnoremap <silent><Leader>b :bd<CR>
+
 nnoremap gq q
 nnoremap <silent> q :<C-u>:close<CR>
 nnoremap <silent> Q :<C-u>:only<CR>
-nnoremap <silent> \b :<C-u>:bd<CR>
-nnoremap <silent> \B :<C-u>:bd!<CR>
 
 " Toggle editor visuals
 nmap <silent> <Leader>ts :setlocal spell!<cr>
