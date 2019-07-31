@@ -20,7 +20,8 @@ nmap \c :call Compile()<CR>
 nmap \F :call FormatCode()<CR>
 nmap \r :call Run()<CR>
 nmap \S :call Sort()<CR>
-nmap \v :call Make()<CR>
+nmap \b :call Make()<CR>
+nmap \v :call Compile_Run()<CR>
 
 nnoremap cp yap<S-}>p
 

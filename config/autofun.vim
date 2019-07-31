@@ -16,15 +16,21 @@ endfunc
 func! Make()
     if &filetype=="c"
         exec 'make'
+        exec 'cw'
     endif
 endfunc
 
 func! Compile()
     if &filetype=="c"
         exec "w"
-        "exec '!clang %'
-        exec 'below term clang %'
+        exec '!clang %'
+        "exec 'below term clang %'
     endif
+endfunc
+
+func! Compile_Run()
+    exec 'call Compile()'
+    exec 'call Run()'
 endfunc
 
 func! Run()
