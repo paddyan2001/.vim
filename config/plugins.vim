@@ -1,5 +1,7 @@
 call plug#begin('~/vimplugged')
 
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'tpope/vim-surround'
 "Plug 'Yggdroot/LeaderF'
 	"let g:Lf_ShortcutF = '<leader>f'
