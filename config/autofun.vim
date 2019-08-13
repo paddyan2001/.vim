@@ -23,7 +23,7 @@ endfunc
 func! Compile()
     if &filetype=="c"
         exec "w"
-        exec '!clang %'
+        exec '!clang % -o %<'
         "exec 'below term clang %'
     endif
 endfunc
@@ -44,8 +44,8 @@ func! Run()
         exec "!./%"
     endif
     if &filetype=="c"
-        "exec '!./%<.out'
-        exec "below term ./%<.out"
+        "exec '!./%<'
+        exec "below term ./%<"
     endif
     if &filetype=="java"
         exec "below term java %<"
